@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abe Ramos — Portfolio</title>
+  <meta name="description" content="Projects, write-ups, and contact info for Abe Ramos." />
+  <style>
+    :root { --bg:#0b0f14; --panel:#121821; --ink:#eaf2ff; --muted:#9bb2d1; --acc:#4aa3ff; --chip:#1a2330; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    header{display:flex;gap:18px;align-items:center;justify-content:space-between;margin:10px 0 24px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#2d6aff,#00e6ff);display:grid;place-items:center;color:#00111a;font-weight:800}
+    h1{font-size:26px;margin:0}
+    .tag{color:var(--muted);font-size:14px}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{background:var(--chip);padding:8px 12px;border-radius:999px;border:1px solid #233143}
+
+    .panel{background:var(--panel);border:1px solid #1d2633;border-radius:16px;padding:20px;margin:18px 0}
+    .panel h2{margin:0 0 12px;font-size:20px}
+
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--chip);border:1px solid #233143;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}
+    .card h3{margin:0 0 4px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{font-size:12px;color:var(--muted);background:#0e141e;padding:4px 8px;border-radius:999px;border:1px solid #1f2a3a}
+
+    footer{color:var(--muted);font-size:14px;margin:24px 0 8px}
+    code{background:#0e141e;border:1px solid #1f2a3a;border-radius:6px;padding:2px 6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">AR</div>
+        <div>
+          <h1>Abe Ramos</h1>
+          <div class="tag">IT Specialist • Sysadmin-in-Progress • Security Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <section id="intro" class="panel">
+      <h2>Hi, I'm Abe 👋</h2>
+      <p>I build and break things in lab environments to learn: Windows Server, AD, networking, and blue-team fundamentals. Below are a few hands-on projects you can click into. Each repo includes a <code>README</code> with what I did and how to reproduce it.</p>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="https://github.com/your-username/AD-Lab">Active Directory Home Lab</a></h3>
+          <p>Multi-VM lab: DC + member server + Windows 11 client. DNS/DHCP, OU/GPO design, user provisioning, and RSAT tooling.</p>
+          <div class="meta">
+            <span class="pill">Windows Server</span>
+            <span class="pill">AD DS</span>
+            <span class="pill">GPO</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/your-username/Network-Monitoring">Small Office Network Monitoring</a></h3>
+          <p>SNMP + syslog + lightweight dashboard. Baselines, alerts, and incident notes.</p>
+          <div class="meta">
+            <span class="pill">SNMP</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Grafana</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/your-username/Blue-Team-Lab">Blue Team Lab</a></h3>
+          <p>Windows logging hardening, Sigma rules, event collection, and detection write-ups mapped to ATT&CK.</p>
+          <div class="meta">
+            <span class="pill">SIEM</span>
+            <span class="pill">Sigma</span>
+            <span class="pill">ATT&CK</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <p>New Jersey–based IT pro focused on support, systems, and security. I like clear docs, clean networks, and helpful automation.</p>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:aberamosp@gmail.com">aberamosp@gmail.com</a> · GitHub: <a href="https://github.com/your-username">@your-username</a></p>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> Abe Ramos • Built with GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
